@@ -11,12 +11,16 @@ body{
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
 .calculatrice{
-    background-color: tomato;
+    background-color: black;
     display: flex;
     flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 10px crimson;
 }
 
 .ecran{
@@ -36,4 +40,32 @@ body{
     grid-template-columns: repeat(4, 50px);
     grid-template-rows: repeat(5, 50px);
     grid-gap: 7px;
+}
+
+button{
+    border:none;
+    outline:none;
+    border-radius:5px;
+    background-color: white;
+    box-shadow: 0 3px gray;
+    font-size: 30px;
+}
+
+button::active {
+    box-shadow: 0 1px beige;
+    transform: translate(2px);
+}
+
+button[data-key='8']{
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+}
+
+button[data-key='13']{
+    grid-column: span 2;
+    background-color: chartreuse;
+    font-weight: bold;
+    color: white;
+    font-size: 35px;
 }
